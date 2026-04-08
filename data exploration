@@ -1,0 +1,12 @@
+import pandas as pd
+
+# Load the dataset
+df = pd.read_csv('data/dataset_psychological.csv')
+
+# Or use Parquet for better performance
+df = pd.read_parquet('data/dataset_psychological.parquet')
+
+# Basic exploration
+print(f"Patients: {df['patient_id'].nunique()}")
+print(f"Records: {len(df)}")
+print(f"Variables: {len(df.columns)}")
